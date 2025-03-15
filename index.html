@@ -1,24 +1,118 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* 头部样式 */
+        header {
+            background-color: #f8f9fa;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* 作品展示区 */
+        .portfolio {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* 网格布局 */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        /* 项目卡片 */
+        .project-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-bottom: 1rem;
+        }
+
+        .tech-stack {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-<div id="app">El Psy Congroo</div>
-<script>
-    window.$docsify = {
-        name: 'Concept',
-        nameLink: '/',
-        repo: 'https://github.com/Linyuzai/concept/',
-        search: 'auto',
-        loadNavbar: true,
-        loadSidebar: true,
-        auto2top: true
-    }
-</script>
-<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+    <header>
+        <h1>自我介绍</h1>
+        <p>👋 你好！我是一名全栈开发者，拥有5年Web开发经验。擅长使用JavaScript/Typescript、Python和Java构建现代化Web应用。对前沿技术保持热情，喜欢通过代码解决实际问题。</p>
+    </header>
+
+    <div class="portfolio">
+        <h2>作品展示</h2>
+        <div class="projects">
+            <!-- 项目1 -->
+            <div class="project-card">
+                <h3>在线协作白板</h3>
+                <p class="tech-stack">React + Node.js + WebSocket</p>
+                <p>基于实时通信的协作绘图工具，支持多人同时编辑和实时同步。</p>
+                <a href="#">查看演示 →</a>
+            </div>
+
+            <!-- 项目2 -->
+            <div class="project-card">
+                <h3>电商管理系统</h3>
+                <p class="tech-stack">Vue3 + Spring Boot + MySQL</p>
+                <p>完整的后台管理系统，包含商品管理、订单追踪和数据可视化模块。</p>
+                <a href="#">GitHub仓库 →</a>
+            </div>
+
+            <!-- 项目3 -->
+            <div class="project-card">
+                <h3>智能客服机器人</h3>
+                <p class="tech-stack">Python + TensorFlow + Flask</p>
+                <p>基于深度学习的自然语言处理系统，实现自动化客户服务。</p>
+                <a href="#">技术文档 →</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
